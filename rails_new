@@ -1,0 +1,150 @@
+#!/usr/bin/env ruby
+
+def create_rails_app(version, flag = nil)
+  run rails_new(version, flag)
+  run 'git add .'
+  run "git commit -m '`#{rails_new(version, flag)}`'"
+  run "git tag #{branch(version, flag)}"
+  run 'git reset HEAD^'
+ensure
+  run 'git clean -fd'
+  run 'git clean -fd'
+end
+
+def rails_new(version, flag)
+  return "rails _#{version}_ new . --#{flag} --skip-bundle" if flag
+
+  "rails _#{version}_ new . --skip-bundle"
+end
+
+def run(command)
+  lcyan = "\e[1;36m"
+  nocolor = "\e[0m"
+
+  puts "#{lcyan}> #{command}#{nocolor}"
+
+  # -- for debugging
+  # print 'press any key to continue...'
+  # $stdin.getc
+  ret = system(command)
+  raise "command failed: #{command}" unless ret
+end
+
+versions_flags = {
+  '6.0.4.4' => %w[
+    skip-action-mailer
+    skip-action-mailbox
+    skip-action-text
+    skip-active-record
+    skip-active-storage
+    skip-puma
+    skip-action-cable
+    skip-sprockets
+    skip-spring
+    skip-listen
+    skip-javascript
+    skip-turbolinks
+    skip-test
+    skip-system-test
+    skip-bootsnap
+    api
+    webpacker
+  ],
+  '6.1.4.4' => %w[
+    skip-action-mailer
+    skip-action-mailbox
+    skip-action-text
+    skip-active-record
+    skip-active-job
+    skip-active-storage
+    skip-puma
+    skip-action-cable
+    skip-sprockets
+    skip-spring
+    skip-listen
+    skip-javascript
+    skip-turbolinks
+    skip-jbuilder
+    skip-test
+    skip-system-test
+    skip-bootsnap
+    api
+    minimal
+    webpacker
+  ],
+  '7.0.0' => %w[
+    skip-action-mailer
+    skip-action-mailbox
+    skip-action-text
+    skip-active-record
+    skip-active-job
+    skip-active-storage
+    skip-action-cable
+    skip-asset-pipeline
+    asset-pipeline=sprockets
+    asset-pipeline=propshaft
+    skip-javascript
+    skip-hotwire
+    skip-jbuilder
+    skip-test
+    skip-system-test
+    skip-bootsnap
+    api
+    minimal
+    javascript=importmap
+    javascript=webpack
+    javascript=esbuild
+    javascript=rollup
+    css=tailwind
+    css=bootstrap
+    css=bulma
+    css=postcss
+    css=sass
+  ]
+}
+
+def branch(version, flag = nil)
+  return [version, flag.gsub('=', '-')].compact.join('-') if flag
+
+  version
+end
+
+sub_command = ARGV.shift
+
+case sub_command
+when 'create'
+  versions_flags.each do |v, flags|
+    create_rails_app(v)
+    flags.each do |f|
+      create_rails_app(v, f)
+    end
+  end
+when 'destroy'
+  versions_flags.each do |v, flags|
+    system "git tag -d #{branch(v)}"
+    flags.each do |f|
+      system "git tag -d #{branch(v, f)}"
+    end
+  end
+when 'readme'
+  repository = 'snaka/rails_new_flags'
+
+  versions_flags.each do |v, flags|
+    puts "## Rails #{v}"
+    puts
+    flags.each do |f|
+      puts <<~README
+        ### --#{f}
+        
+        ```
+        #{rails_new(v, f)}
+        ```
+        
+        - [See differences with no flag](https://github.com/#{repository}/compare/#{branch(v)}..#{branch(v, f)})
+        
+      README
+    end
+  end
+else
+  puts "Usage: #{$0} [create|destroy]"
+end
