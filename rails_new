@@ -145,22 +145,25 @@ when 'destroy'
 when 'readme'
   repository = 'snaka/rails_new_flags'
 
-  filtered_versions_flags(target).each do |v, flags|
-    puts "## Rails #{v}"
-    puts
+  summary = {}
+  filtered_versions_flags('all').each do |v, flags|
     flags.each do |f|
-      puts <<~README
-        ### --#{f}
-        
-        ```
-        #{rails_new(v, f)}
-        ```
-        
-        - [See differences with no flag](https://github.com/#{repository}/compare/#{branch(v)}..#{branch(v, f)})
-        
-      README
+      summary[f] ||= {}
+      summary[f][v] = "https://github.com/#{repository}/compare/#{branch(v)}..#{branch(v, f)}"
     end
   end
+
+  versions = filtered_versions_flags('all').keys.sort
+  flags = filtered_versions_flags('all').values.flatten.uniq.sort
+
+  puts '| flag |' << versions.map { |v| " #{v} " }.join('|') << '|'
+  puts '| --- |' << versions.count.times.map { ' --- ' }.join('|') << '|'
+
+  diff_url = ->(url) { url ? " [🔍](#{url}) " : ' - ' }
+
+  flags.each do |f|
+    puts "| --#{f} |" << versions.map { |v| diff_url.call(summary.dig(f, v)) }.join('|') << '|'
+  end
 else
-  puts "Usage: #{$0} [create|destroy]"
+  puts "Usage: #{$0} [create|destroy|readme]"
 end
