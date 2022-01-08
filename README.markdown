@@ -6,7 +6,7 @@ Note that obvious flags such as `-ski-bundle` and `-skip-gemfile` are not covere
 
 - [Rails 6.0.4.4](#rails-6044)
 - [Rails 6.1.4.4](#rails-6144)
-- [Rails 7.0.0](#rails-700)
+- [Rails 7.0.1](#rails-701)
 
 ## Rails 6.0.4.4
 
@@ -271,194 +271,221 @@ rails _6.1.4.4_ new . --webpacker --skip-bundle
 ```
 
 - [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/6.1.4.4..6.1.4.4-webpacker)
-## Rails 7.0.0
+
+## Rails 7.0.1
 
 ### --skip-action-mailer
 
 ```
-rails _7.0.0_ new . --skip-action-mailer --skip-bundle
+rails _7.0.1_ new . --skip-action-mailer --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-skip-action-mailer)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-skip-action-mailer)
+
 ### --skip-action-mailbox
 
 ```
-rails _7.0.0_ new . --skip-action-mailbox --skip-bundle
+rails _7.0.1_ new . --skip-action-mailbox --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-skip-action-mailbox)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-skip-action-mailbox)
+
 ### --skip-action-text
 
 ```
-rails _7.0.0_ new . --skip-action-text --skip-bundle
+rails _7.0.1_ new . --skip-action-text --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-skip-action-text)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-skip-action-text)
+
 ### --skip-active-record
 
 ```
-rails _7.0.0_ new . --skip-active-record --skip-bundle
+rails _7.0.1_ new . --skip-active-record --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-skip-active-record)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-skip-active-record)
+
 ### --skip-active-job
 
 ```
-rails _7.0.0_ new . --skip-active-job --skip-bundle
+rails _7.0.1_ new . --skip-active-job --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-skip-active-job)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-skip-active-job)
+
 ### --skip-active-storage
 
 ```
-rails _7.0.0_ new . --skip-active-storage --skip-bundle
+rails _7.0.1_ new . --skip-active-storage --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-skip-active-storage)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-skip-active-storage)
+
 ### --skip-action-cable
 
 ```
-rails _7.0.0_ new . --skip-action-cable --skip-bundle
+rails _7.0.1_ new . --skip-action-cable --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-skip-action-cable)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-skip-action-cable)
+
 ### --skip-asset-pipeline
 
 ```
-rails _7.0.0_ new . --skip-asset-pipeline --skip-bundle
+rails _7.0.1_ new . --skip-asset-pipeline --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-skip-asset-pipeline)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-skip-asset-pipeline)
+
 ### --asset-pipeline=sprockets
 
 ```
-rails _7.0.0_ new . --asset-pipeline=sprockets --skip-bundle
+rails _7.0.1_ new . --asset-pipeline=sprockets --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-asset-pipeline-sprockets)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-asset-pipeline-sprockets)
+
 ### --asset-pipeline=propshaft
 
 ```
-rails _7.0.0_ new . --asset-pipeline=propshaft --skip-bundle
+rails _7.0.1_ new . --asset-pipeline=propshaft --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-asset-pipeline-propshaft)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-asset-pipeline-propshaft)
+
 ### --skip-javascript
 
 ```
-rails _7.0.0_ new . --skip-javascript --skip-bundle
+rails _7.0.1_ new . --skip-javascript --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-skip-javascript)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-skip-javascript)
+
 ### --skip-hotwire
 
 ```
-rails _7.0.0_ new . --skip-hotwire --skip-bundle
+rails _7.0.1_ new . --skip-hotwire --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-skip-hotwire)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-skip-hotwire)
+
 ### --skip-jbuilder
 
 ```
-rails _7.0.0_ new . --skip-jbuilder --skip-bundle
+rails _7.0.1_ new . --skip-jbuilder --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-skip-jbuilder)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-skip-jbuilder)
+
 ### --skip-test
 
 ```
-rails _7.0.0_ new . --skip-test --skip-bundle
+rails _7.0.1_ new . --skip-test --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-skip-test)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-skip-test)
+
 ### --skip-system-test
 
 ```
-rails _7.0.0_ new . --skip-system-test --skip-bundle
+rails _7.0.1_ new . --skip-system-test --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-skip-system-test)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-skip-system-test)
+
 ### --skip-bootsnap
 
 ```
-rails _7.0.0_ new . --skip-bootsnap --skip-bundle
+rails _7.0.1_ new . --skip-bootsnap --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-skip-bootsnap)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-skip-bootsnap)
+
 ### --api
 
 ```
-rails _7.0.0_ new . --api --skip-bundle
+rails _7.0.1_ new . --api --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-api)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-api)
+
 ### --minimal
 
 ```
-rails _7.0.0_ new . --minimal --skip-bundle
+rails _7.0.1_ new . --minimal --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-minimal)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-minimal)
+
 ### --javascript=importmap
 
 ```
-rails _7.0.0_ new . --javascript=importmap --skip-bundle
+rails _7.0.1_ new . --javascript=importmap --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-javascript-importmap)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-javascript-importmap)
+
 ### --javascript=webpack
 
 ```
-rails _7.0.0_ new . --javascript=webpack --skip-bundle
+rails _7.0.1_ new . --javascript=webpack --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-javascript-webpack)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-javascript-webpack)
+
 ### --javascript=esbuild
 
 ```
-rails _7.0.0_ new . --javascript=esbuild --skip-bundle
+rails _7.0.1_ new . --javascript=esbuild --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-javascript-esbuild)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-javascript-esbuild)
+
 ### --javascript=rollup
 
 ```
-rails _7.0.0_ new . --javascript=rollup --skip-bundle
+rails _7.0.1_ new . --javascript=rollup --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-javascript-rollup)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-javascript-rollup)
+
 ### --css=tailwind
 
 ```
-rails _7.0.0_ new . --css=tailwind --skip-bundle
+rails _7.0.1_ new . --css=tailwind --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-css-tailwind)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-css-tailwind)
+
 ### --css=bootstrap
 
 ```
-rails _7.0.0_ new . --css=bootstrap --skip-bundle
+rails _7.0.1_ new . --css=bootstrap --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-css-bootstrap)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-css-bootstrap)
+
 ### --css=bulma
 
 ```
-rails _7.0.0_ new . --css=bulma --skip-bundle
+rails _7.0.1_ new . --css=bulma --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-css-bulma)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-css-bulma)
+
 ### --css=postcss
 
 ```
-rails _7.0.0_ new . --css=postcss --skip-bundle
+rails _7.0.1_ new . --css=postcss --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-css-postcss)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-css-postcss)
+
 ### --css=sass
 
 ```
-rails _7.0.0_ new . --css=sass --skip-bundle
+rails _7.0.1_ new . --css=sass --skip-bundle
 ```
 
-- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.0..7.0.0-css-sass)
+- [See differences with no flag](https://github.com/snaka/rails_new_flags/compare/7.0.1..7.0.1-css-sass)
