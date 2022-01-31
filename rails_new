@@ -13,9 +13,9 @@ ensure
 end
 
 def rails_new(version, flag)
-  return "rails _#{version}_ new . --#{flag} --skip-bundle" if flag
+  return "rails _#{version}_ new . --#{flag}" if flag
 
-  "rails _#{version}_ new . --skip-bundle"
+  "rails _#{version}_ new ."
 end
 
 def run(command)
