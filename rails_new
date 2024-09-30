@@ -35,25 +35,6 @@ end
 
 def filtered_versions_flags(target)
   versions_flags = {
-    '6.0.6.1' => %w[
-      skip-action-mailer
-      skip-action-mailbox
-      skip-action-text
-      skip-active-record
-      skip-active-storage
-      skip-puma
-      skip-action-cable
-      skip-sprockets
-      skip-spring
-      skip-listen
-      skip-javascript
-      skip-turbolinks
-      skip-test
-      skip-system-test
-      skip-bootsnap
-      api
-      webpacker
-    ],
     '6.1.7.8' => %w[
       skip-action-mailer
       skip-action-mailbox
@@ -77,33 +58,66 @@ def filtered_versions_flags(target)
       webpacker
     ],
     '7.0.8.4' => %w[
-      skip-action-mailer
-      skip-action-mailbox
-      skip-action-text
-      skip-active-record
-      skip-active-job
-      skip-active-storage
       skip-action-cable
+      skip-action-mailbox
+      skip-action-mailer
+      skip-action-text
+      skip-active-job
+      skip-active-record
+      skip-active-storage
       skip-asset-pipeline
-      asset-pipeline=sprockets
-      asset-pipeline=propshaft
-      skip-javascript
-      skip-hotwire
-      skip-jbuilder
-      skip-test
-      skip-system-test
       skip-bootsnap
-      api
-      minimal
-      javascript=importmap
-      javascript=webpack
-      javascript=esbuild
-      javascript=rollup
-      css=tailwind
+      skip-hotwire
+      skip-javascript
+      skip-jbuilder
+      skip-system-test
+      skip-test
+      asset-pipeline=propshaft
+      asset-pipeline=sprockets
       css=bootstrap
       css=bulma
       css=postcss
       css=sass
+      css=tailwind
+      javascript=esbuild
+      javascript=importmap
+      javascript=rollup
+      javascript=webpack
+      api
+      minimal
+    ],
+    '7.1.4' => %w[
+      skip-action-cable
+      skip-action-mailbox
+      skip-action-mailer
+      skip-action-text
+      skip-active-job
+      skip-active-record
+      skip-active-storage
+      skip-asset-pipeline
+      skip-bootsnap
+      skip-dev-gems
+      skip-hotwire
+      skip-javascript
+      skip-jbuilder
+      skip-system-test
+      skip-test
+      skip-sprockets
+      skip-propshaft
+      skip-docker
+      skip-git
+      css=bootstrap
+      css=bulma
+      css=postcss
+      css=sass
+      css=tailwind
+      javascript=bun
+      javascript=esbuild
+      javascript=importmap
+      javascript=rollup
+      javascript=webpack
+      api
+      minimal
     ]
   }
   return versions_flags if target == 'all'
