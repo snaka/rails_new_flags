@@ -4,10 +4,11 @@ require 'optparse'
 def create_rails_app(version, flag = nil)
   run rails_new(version, flag)
   run 'git add .'
-  run "git commit -m '`#{rails_new(version, flag)}`'"
-  run "git tag #{branch(version, flag)}"
+  run "git -c commit.gpgsign=false commit -m '`#{rails_new(version, flag)}`'"
+  run "git tag --no-sign #{branch(version, flag)}"
   run 'git reset HEAD^'
 ensure
+  # 2回実行しないと config/, log/, node_modules/, tmp/ が削除されないため
   run 'git clean -fd'
   run 'git clean -fd'
 end
