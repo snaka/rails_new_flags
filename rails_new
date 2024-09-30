@@ -72,6 +72,8 @@ def filtered_versions_flags(target)
       skip-jbuilder
       skip-system-test
       skip-test
+      skip-sprockets
+      skip-propshaft
       asset-pipeline=propshaft
       asset-pipeline=sprockets
       css=bootstrap
@@ -145,6 +147,8 @@ def filtered_versions_flags(target)
       skip-breakeman
       skip-ci
       skip-devcontainer
+      asset-pipeline=propshaft
+      asset-pipeline=sprockets
       css=bootstrap
       css=bulma
       css=postcss
