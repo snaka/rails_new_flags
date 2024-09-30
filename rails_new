@@ -106,6 +106,45 @@ def filtered_versions_flags(target)
       skip-propshaft
       skip-docker
       skip-git
+      asset-pipeline=propshaft
+      asset-pipeline=sprockets
+      css=bootstrap
+      css=bulma
+      css=postcss
+      css=sass
+      css=tailwind
+      javascript=bun
+      javascript=esbuild
+      javascript=importmap
+      javascript=rollup
+      javascript=webpack
+      api
+      minimal
+    ],
+    '7.2.1' => %w[
+      skip-action-cable
+      skip-action-mailbox
+      skip-action-mailer
+      skip-action-text
+      skip-active-job
+      skip-active-record
+      skip-active-storage
+      skip-asset-pipeline
+      skip-bootsnap
+      skip-dev-gems
+      skip-hotwire
+      skip-javascript
+      skip-jbuilder
+      skip-system-test
+      skip-test
+      skip-sprockets
+      skip-propshaft
+      skip-docker
+      skip-git
+      skip-rubocop
+      skip-breakeman
+      skip-ci
+      skip-devcontainer
       css=bootstrap
       css=bulma
       css=postcss
