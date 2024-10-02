@@ -209,7 +209,7 @@ when 'readme'
   filtered_versions_flags('all').each do |v, flags|
     flags.each do |f|
       summary[f] ||= {}
-      summary[f][v] = "https://github.com/#{repository}/compare/#{branch(v)}..#{branch(v, f)}"
+      summary[f][v] = true
     end
   end
 
@@ -219,10 +219,17 @@ when 'readme'
   puts '| flag |' << versions.map { |v| " [#{v}](https://github.com/#{repository}/tree/#{branch(v)}) " }.join('|') << '|'
   puts '| --- |' << versions.count.times.map { ' --- ' }.join('|') << '|'
 
-  diff_url = ->(url) { url ? " [🔍](#{url}) " : ' - ' }
+  browse_url = ->(tag) { "https://github.com/#{repository}/tree/#{tag}" }
+  diff_url = lambda do |flag, ver|
+    if summary.dig(flag, ver)
+      " [↔️](https://github.com/#{repository}/compare/#{branch(ver)}..#{branch(ver, flag)}) "
+    else
+      ' - '
+    end
+  end
 
   flags.each do |f|
-    puts "| --#{f} |" << versions.map { |v| diff_url.call(summary.dig(f, v)) }.join('|') << '|'
+    puts "| --#{f} |" << versions.map { |v| diff_url.call(f, v) }.join('|') << '|'
   end
 else
   puts "Usage: #{$0} [create|destroy|readme]"
