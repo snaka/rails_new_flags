@@ -216,7 +216,7 @@ when 'readme'
   versions = filtered_versions_flags('all').keys.sort
   flags = filtered_versions_flags('all').values.flatten.uniq.sort
 
-  puts '| flag |' << versions.map { |v| " #{v} " }.join('|') << '|'
+  puts '| flag |' << versions.map { |v| " [#{v}](https://github.com/#{repository}/tree/#{branch(v)}) " }.join('|') << '|'
   puts '| --- |' << versions.count.times.map { ' --- ' }.join('|') << '|'
 
   diff_url = ->(url) { url ? " [🔍](#{url}) " : ' - ' }
