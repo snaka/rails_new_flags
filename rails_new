@@ -4,6 +4,7 @@ require 'optparse'
 def create_rails_app(version, flag = nil)
   run "gem install rails -v #{version} --no-document"
   run rails_new(version, flag)
+  run 'echo config/credentials.yml.enc >> .gitignore'
   run 'git add .'
   run "git -c commit.gpgsign=false commit -m '`#{rails_new(version, flag)}`'"
   run "git tag --no-sign #{branch(version, flag)}"
