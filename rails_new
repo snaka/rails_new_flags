@@ -74,8 +74,6 @@ def filtered_versions_flags(target)
       skip-jbuilder
       skip-system-test
       skip-test
-      skip-sprockets
-      skip-propshaft
       asset-pipeline=propshaft
       asset-pipeline=sprockets
       css=bootstrap
@@ -106,8 +104,6 @@ def filtered_versions_flags(target)
       skip-jbuilder
       skip-system-test
       skip-test
-      skip-sprockets
-      skip-propshaft
       skip-docker
       skip-git
       asset-pipeline=propshaft
@@ -141,8 +137,6 @@ def filtered_versions_flags(target)
       skip-jbuilder
       skip-system-test
       skip-test
-      skip-sprockets
-      skip-propshaft
       skip-docker
       skip-git
       skip-rubocop
@@ -181,8 +175,6 @@ def filtered_versions_flags(target)
       skip-jbuilder
       skip-system-test
       skip-test
-      skip-sprockets
-      skip-propshaft
       skip-docker
       skip-git
       skip-rubocop
