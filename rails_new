@@ -146,7 +146,7 @@ def filtered_versions_flags(target)
       skip-docker
       skip-git
       skip-rubocop
-      skip-breakeman
+      skip-brakeman
       skip-ci
       skip-devcontainer
       asset-pipeline=propshaft
@@ -171,7 +171,7 @@ def filtered_versions_flags(target)
 end
 
 def branch(version, flag = nil)
-  return [version, flag.gsub('=', '-')].compact.join('-') if flag
+  return [ version, flag.gsub('=', '-') ].compact.join('-') if flag
 
   version
 end
