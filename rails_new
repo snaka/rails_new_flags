@@ -149,6 +149,50 @@ def filtered_versions_flags(target)
       skip-brakeman
       skip-ci
       skip-devcontainer
+      devcontainer
+      asset-pipeline=propshaft
+      asset-pipeline=sprockets
+      css=bootstrap
+      css=bulma
+      css=postcss
+      css=sass
+      css=tailwind
+      javascript=bun
+      javascript=esbuild
+      javascript=importmap
+      javascript=rollup
+      javascript=webpack
+      api
+      minimal
+    ],
+    '8.0.0.beta1' => %w[
+      skip-action-cable
+      skip-action-mailbox
+      skip-action-mailer
+      skip-action-text
+      skip-active-job
+      skip-active-record
+      skip-active-storage
+      skip-asset-pipeline
+      skip-bootsnap
+      skip-dev-gems
+      skip-hotwire
+      skip-javascript
+      skip-jbuilder
+      skip-system-test
+      skip-test
+      skip-sprockets
+      skip-propshaft
+      skip-docker
+      skip-git
+      skip-rubocop
+      skip-brakeman
+      skip-ci
+      skip-devcontainer
+      skip-thruster
+      skip-kamal
+      skip-solid
+      devcontainer
       asset-pipeline=propshaft
       asset-pipeline=sprockets
       css=bootstrap
