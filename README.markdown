@@ -2,7 +2,7 @@
 
 In this repository, you can see the difference in the output code when `rails new` is given a flag such as `-skip-javascript`.
 
-Note that obvious flags such as `-ski-bundle` and `-skip-gemfile` are not covered.
+Note that obvious flags such as `-skip-bundle` and `-skip-gemfile` are not covered.
 
 ## Summary
 
